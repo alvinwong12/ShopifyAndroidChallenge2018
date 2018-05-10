@@ -117,10 +117,7 @@ public class GetOrdersTask extends AsyncTask<Void, Void, String> {
                 Date date = parser.parse(createdAt);
                 SimpleDateFormat formatter = new SimpleDateFormat("yyyy");
                 formattedDate = formatter.format(date);
-            } catch (JSONException e) {
-                formattedDate = null;
-
-            } catch (ParseException e) {
+            } catch (JSONException | ParseException e) {
                 formattedDate = null;
             }
             try{
